@@ -1,0 +1,16 @@
+TO DO LIST
+
+1. make a example website page for business boosters and add example seller and traffic and semrush and google analytics.
+2. and start making websiteMart website
+rgb(8, 44, 78);grey
+rgb(48, 152, 243); , 3098F3 blue
+rgb(255, 204, 0) , FFCC00; yellow
+FE6571 Pink
+05051E , H1 H2
+
+Prime Video Theme
+Navbar : #232F3E
+button and logo : #00A8E1
+footer : #37475A
+Heading : #243238
+background:linear-gradient(96.44deg,#c5d5ff,#e2f0ff 51.56%,#d7d4ff)

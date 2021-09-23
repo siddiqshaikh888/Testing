@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Website for Sell{% endblock title %}
+{% block body %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>E-commerce of Organic and Childcare eco-friendly <br>Baby clothes for sale - Price: ₹50,000</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Example Website</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{% static 'img/template9.jpg'%}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'img/template6.jpg'%}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'img/template5.jpg'%}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div></div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" style="background-color: #fff;">
+                <h7>Price</h7>
+              <h3>₹50,000</h3>
+                <a href="#contact"><button>More Details</button></a>
+                <h5></h5>
+                Monthly revenue: 1.973,00 ₹
+                <h5></h5>
+                Multiple: 24
+                <h5></h5>
+                Monthly visits: 6.153
+                <h5></h5>
+                <h6>About The Seller</h6>
+                <div>
+                    <img src="{% static 'img/testimonials/testimonials-4.jpg'%}" class="seller-img" style="float: left;"></div><div style="padding-left: 65px;"><strong>Siddiq Shaikh</strong><br><strong></strong><i class="fas fa-map-marker-alt"></i> India</div><br>
+                <div>
+              <ul style="border-bottom: 1px solid #eee;">
+                  <li><a href="" class="blue-txt">Watch seller</a></li>
+                  <li><a href="" class="blue-txt">Other listing by this seller</a></li>
+                  <li><a href="#contact" class="blue-txt">Contact Seller</a></li>
+                  <li><a></a></li>
+              </ul>
+            </div>
+              </div>
+          </div>
+          </div>
+
+        </div>
+
+      </div>
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-8" id="description" style="background-color: #fff;">
+              <h2>Description</h2>
+              <p>This business is an E-commerce of Baby clothes and accessories. The website is focused on the Childcare sector and pursues easing a healthy growth of the children, while protecting the environment with the materials chosen to make their products. <br><br>
+                This website was created in 2013. It has a great potential and is very well ranked in SEO (1st place in the 4 main categories of their business). It has had over 73.800 visits in the last 12 months.<br><BR>
+                Price offer: the website's price is 15.000 € and the business stock is 7.800 € (this will be updated in the moment of the purchase. Depending on the stock left).
+              <br><br>
+                Business interesting data:<br>
+                <ul>
+                <li>Monetisation type: E-commerce (stock shipping).</li>
+                <li>Stock value: 7.800 €.</li>
+                <li>Average monthly revenue (last 12 months): 616 €</li>
+                <li>Revenue from the last 12 months: 7.395 €</li>
+                <li>Social Media included in the purchase: Facebook (>20.000 followers), Instagram (1.000 followers), Twitter (400 followers), Pinterest and YouTube.</li>
+                </ul></p>
+                <h2>Stats</h2>
+                <img src="{% static 'img/stats.png'%}">
+                <h2>Assets Include in the sale</h2>
+                <ul>
+                  <li>Domain</li>
+                  <li>Social Media Accounts</li></ul>
+            </div>
+  
+            <div class="col-lg-4">
+              <div class="portfolio-info" style="background-color: #fff; margin-top: 50px;">
+                <h4 style="margin-bottom: 30px;">Summary</h4>
+                Monetization: Ecommerce
+                  <h5></h5>
+                  Technology: Prestashop
+                  <h5></h5>
+                  Niche: Clothes and footwear
+                  <h5></h5>
+                  CMS: PrestaShop
+                  <h5></h5>
+                  Start date: 2013
+                  <h5></h5>
+                  Language: English
+                  <h5></h5>
+                  How to buy: Bank Transfer
+              </div>
+            </div>
+            </div>
+  
+          </div>
+  
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+     <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Do you want to receive more information about this property?</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-12">
+            <form action="/websitedetail" method="POST" role="form"  style="padding:50px 150px 30px 150px;">{% csrf_token %}
+              <div class="row">
+                <p>Fill in your personal details</p>
+                <div class="col-md-4 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone" required>
+              </div>
+            </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control"  name="message" id="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div  style="padding: 20px;">
+              <input type="checkbox" required> <b>I have read and accept the privacy policy</b>
+              <p style="padding-top: 2px;"></p>Business Boosters collects personal data for internal use only. Your data will not be transferred to third parties without your prior
+                 authorization in any case. In accordance with the law of 8 December 1992, you may request access to the database
+                 containing your personal data and change this information at any time by contacting Business Boosters (support@businessboostersmarket.com)</p>
+              </div>
+              <div class="text-center"><button type="submit">Request more info</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+  </main><!-- End #main -->
+{% endblock body %}

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BBM #1 for Buying and Belling Online Businesses{% endblock title %}
+{% block body %}
+<main id="main">
+<!-- ======= Services Section ======= -->
+<section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>What are you selling?</h2>
+        <p>1000+ buyers are waiting</p>
+      </div>
+
+      <div class="row justify-content-center">
+      <div class="col-md-8 pb-5 pb-md-6">
+        <form action="/sell" method="post">{% csrf_token %}
+          <div class="row mt-3">
+            <div class="col-md-10 pr-md-0">
+              <h6>Enter your URL to start selling</h6>
+              <div class="border rounded">
+                <input type="url" name="id" id="id" class="rounded border-0 w-100 p-3" autocomplete="off" />
+              </div>
+              <small class="form-text text-muted d-block d-md-none">Use Play Store or App Store URL for mobile apps.</small>
+            </div>
+            <div class="col-md-2 mt-3 mt-md-0 align-self-end">
+              <a href="sell-type.html"><button type="submit" class="btn btn-primary btn-block btn-md-inline-block btn-wide font-weight-bold input-group-text2">Continue</button></a>
+            </div>
+          </div>
+          <small class="form-text text-muted d-none d-md-block">Use Play Store or App Store URL for mobile apps.</small>
+    </form>
+      </div></div>
+
+      <div class="section-title">
+        <h4>What you can sell on Business Boosters Market:</h4>
+      </div>
+      <div class="row gy-6">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box iconbox-blue">
+            <div class="icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <h4><a href="">Established Websites and Online Businesses</a></h4>
+            <p>Websites or online businesses that are trading and have been generating revenue for at least 1 year.{{url}}</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box iconbox-orange ">
+            <div class="icon">
+                <i class="fas fa-folder-open"></i>
+            </div>
+            <h4><a href="">Starter/Template Websites</a></h4>
+            <p>Starter site less than 1 year old, or a template site.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box iconbox-blue">
+            <div class="icon">
+                <i class="fas fa-mouse-pointer"></i>
+            </div>
+            <h4><a href="">Domains</a></h4>
+            <p>Domain names that are undeveloped or parked.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box iconbox-pink">
+            <div class="icon">
+              <i class="fas fa-mobile"></i>
+            </div>
+            <h4><a href="">iOS or Android Apps</a></h4>
+            <p>Established or Starter Apps for mobile or tablet.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+</main>
+{% endblock body %}

@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BBM #1 for Buying and Belling Online Businesses{% endblock title %}
+{% block body %}
+<main id="main">
+<!-- ======= Services Section ======= -->
+<section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2> Sell you Business And also get Free Valuation</h2>
+      </div>
+
+      <section id="portfolio-details" class="portfolio-details">
+        <form action="/sell" method="POST" role="form" class="php-email-form">{% csrf_token %}
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-8" id="description" style="background-color: #fff; padding:0px 40px 50px 40px;">
+                
+                    <div class="row">
+                      <h2>Name and Contact</h2>
+                      <div class="col-md-12 form-group">
+                          <label>Name</label>
+                        <input type="name" name="name" class="form-control" id="name" required>
+                      </div>
+                      <div class="col-md-12 form-group mt-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                      </div>
+                      </div>
+                      <div class="row">
+                    <div class="col-md-12 form-group mt-3">
+                        <label>Phone or mobile</label>
+                      <input type="phone" class="form-control" name="phone" id="phone" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label>Country</label>
+                        <input type="country" class="form-control" name="country" id="country" required>
+                    </div>
+                    </div>
+                    <div class="text-center"><button type="submit" class="sell-submit">Request valuation</button></div></form>
+                  
+            </div>
+
+            <div class="col-lg-4">
+              <div class="portfolio-info" style="background-color: #fff;">
+                <h4 style="margin-bottom: 30px;">Basic Rules</h4>
+                <h6>Veracity of the data</h6>
+                <p>All data you send to us must be accurate and true. Our team will confirm such accuracy.</p>
+                
+                <h6>Property rights</h6>
+                <p>You, the person or company you represent, must be the rightful owner of the property. This information will be confirmed by our team.</p>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-8" id="description" style="background-color: #fff; margin-top: 60px; padding:0px 40px 50px 40px;">
+                
+                    <div class="row">
+                      <h2>Property details</h2>
+                      <div class="col-md-12 form-group">
+                          <label>Property Type</label>
+                        <input type="url" name="url" class="form-control" id="url" required>
+                      </div>
+                      <div class="col-md-12 form-group">
+                          <label>Property URL</label>
+                        <input type="url" name="url" class="form-control" id="url" required>
+                      </div>
+                      <div class="col-md-12 form-group mt-3">
+                        <label>Property description</label>
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message" id="message" required></textarea>
+                      </div>
+                      </div>
+                      <div class="row">
+                    <div class="col-md-12 form-group mt-3">
+                        <label>Starting date of the business</label>
+                      <input type="date" class="form-control" name="date" id="date" required>
+                    </div>
+                    </div>
+                    <div class="col-md-12 form-group mt-3">
+                    <label style="margin-bottom: 10px;">Monitzation</label><br>
+                    <input type="checkbox" style="margin-left: 10px;"> Ecommerce
+                    <input type="checkbox" style="margin-left: 10px;"> Ads
+                    <input type="checkbox" style="margin-left: 10px;"> AdSense
+                    <input type="checkbox" style="margin-left: 10px;"> Affiliate
+                    <input type="checkbox" style="margin-left: 10px;"> SaaS  
+                    <input type="checkbox" style="margin-left: 10px;"> Subscriptions
+                     </div>
+                    </div>
+            <div class="col-lg-4">
+              <div class="portfolio-info" style="background-color: #fff; ">
+                <h4 style="margin-bottom: 30px;">Do not have all the data we ask?</h4>
+                <p>Don't worry. If at this moment you do not have all the data we ask, just send what you have. Our team will contact you shortly 
+                    so that we can collect all relevant data and can deliver the best valuation possible.</p>
+                </div>
+            </div>
+            </div>
+            </div>
+          </div>
+          <div class="container">
+          <div class="row gy-4">
+  
+            <div class="col-lg-8" id="description" style="background-color: #fff; margin-top: 0px; padding:0px 40px 50px 40px;">
+                
+                    <div class="row">
+                      <h2>Technology</h2>
+                      <div class="col-md-12 form-group">
+                          <label style="margin-bottom: 10px;">Do you have access to Google Analytics for the property?</label><br>
+                          <label class="radio">
+                            <input type="radio"> Yes
+                            <div class="circle"></div>
+                        </label>
+                          <label class="radio">
+                            <input type="radio"> No
+                            <div class="circle"></div>
+                        </label>
+                      </div>
+                      <div class="col-md-12 form-group mt-3">
+                        <label>Reason for the sale. Why do you want to sell?</label>
+                        <textarea class="form-control" name="message1" rows="5" required></textarea>
+                      </div>
+                      </div>
+                  
+            </div>
+            </div></div>
+          <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-8" id="description" style="background-color: #fff; margin-top: 40px; padding:0px 40px 50px 40px;">
+                
+                    <div class="row">
+                      <h2>Revenue</h2>
+                      <div class="row">
+                    <div class="col-md-6 form-group mt-3">
+                        <label>Last 30 days</label>
+                      <input type="text" class="form-control" name="phone" id="phone" placeholder="00.00" required>
+                    </div>
+                    <div class="col-md-6 form-group mt-3">
+                        <label>Last 12 months</label>
+                      <input type="text" class="form-control" name="phone" id="phone" placeholder="00.00" required>
+                    </div>
+                    </div>
+                  
+            </div>
+            </div></div>
+            <div class="container">
+                <div class="row gy-4">
+            <div class="col-lg-8" id="description" style="background-color: #fff; margin-top: 40px; padding:0px 40px 50px 40px;">
+                
+                    <div class="row">
+                      <h2>Visitors statistics</h2>
+                      <div class="row">
+                    <div class="col-md-6 form-group mt-3">
+                        <label> Visits Last 30 days</label>
+                      <input type="text" class="form-control" name="phone" id="phone" placeholder="00.00" required>
+                    </div>
+                    <div class="col-md-6 form-group mt-3">
+                        <label> Visits Last 12 months</label>
+                      <input type="text" class="form-control" name="phone" id="phone" placeholder="00.00" required>
+                    </div>
+                    </div>
+                  </div></div></div></div>
+                  <div class="container">
+                    <div class="row gy-4">
+                <div class="col-lg-8" id="description" style="background-color: #fff; margin-top: 40px; padding:0px 20px 50px 20px;">
+                  <div  style="padding: 20px;">
+                    <input type="checkbox"> <b>I have read and accept the privacy policy</b>
+                    <p style="padding-top: 1px;"></p>Business Boosters collects personal data for internal use only. Your data will not be transferred to third parties without your prior
+                       authorization in any case. In accordance with the law of 8 December 1992, you may request access to the database
+                       containing your personal data and change this information at any time by contacting Business Boosters (support@businessboostersmarket.com)</p>
+                    </div>
+                   </div></div></div></div></section>
+
+
+      <div class="section-title">
+        <h4>What you can sell on Business Boosters Market:</h4>
+      </div>
+      <div class="row gy-6">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box iconbox-blue">
+            <div class="icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <h4><a href="">Established Websites and Online Businesses</a></h4>
+            <p>Websites or online businesses that are trading and have been generating revenue for at least 1 year.{{url}}</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box iconbox-orange ">
+            <div class="icon">
+                <i class="fas fa-folder-open"></i>
+            </div>
+            <h4><a href="">Starter/Template Websites</a></h4>
+            <p>Starter site less than 1 year old, or a template site.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box iconbox-blue">
+            <div class="icon">
+                <i class="fas fa-mouse-pointer"></i>
+            </div>
+            <h4><a href="">Domains</a></h4>
+            <p>Domain names that are undeveloped or parked.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box iconbox-pink">
+            <div class="icon">
+              <i class="fas fa-mobile"></i>
+            </div>
+            <h4><a href="">iOS or Android Apps</a></h4>
+            <p>Established or Starter Apps for mobile or tablet.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+</main>
+{% endblock body %}
